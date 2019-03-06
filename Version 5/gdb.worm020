@@ -1,0 +1,49 @@
+# worm_info
+# Die relevanten Daten ueber den Wurm ausgeben
+# Diese Version funktioniert fuer Worm020 bis Worm040
+
+define worm_info
+	printf "headindex=%-3d maxindex=%-3d dx=%-2d dy=%-2d\n",\
+		theworm_headindex, theworm_maxindex, theworm_dx, theworm_dy
+end
+
+# worm_dump
+# Den Ringpuffer des Wurms komplett ausgeben
+define worm_dump
+	worm_info
+
+	set $_c = 0
+	printf "  i   y   x\n"
+	while ( $_c <= theworm_maxindex)
+		printf "%3d %3d %3d", $_c,\
+			theworm_wormpos_y[$_c], \
+			theworm_wormpos_x[$_c]
+		if ( $_c == theworm_headindex )
+			printf "  <- headindex\n"
+		else
+			printf "\n"
+		end
+		set $_c++
+	end
+end
+
+#################################################################
+# SOME HOOKS
+#################################################################
+
+# hook-stop
+# Dump the worm each time execution stops
+define hook-stop
+	worm_dump
+end
+
+#################################################################
+# Commands we like to be executed during load of this file
+#################################################################
+
+break main
+break readUserInput
+set listsize 10
+# Remove next line if used with a debugger without TUI-mode, e.g on Mac or MinGW
+#winheight src 12
+

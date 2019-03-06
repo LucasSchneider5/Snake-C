@@ -1,0 +1,51 @@
+# worm_info
+# Die relevanten Daten ueber den Wurm ausgeben
+# Diese Version funktioniert ab Worm070
+
+define worm_info
+	printf "headindex=%-3d maxindex=%-3d cur_lastindex=%-3d dx=%-2d dy=%-2d\n",\
+		doLevel::userworm.headindex, doLevel::userworm.maxindex, \
+		doLevel::userworm.cur_lastindex, \
+		doLevel::userworm.dx, doLevel::userworm.dy
+end
+
+# worm_dump
+# Den Ringpuffer des Wurms komplett ausgeben
+define worm_dump
+	worm_info
+
+	set $_c = 0
+	printf "  i   y   x\n"
+	while ( $_c <= doLevel::userworm.cur_lastindex)
+		printf "%3d %3d %3d", $_c,\
+			doLevel::userworm.wormpos[$_c].y, \
+			doLevel::userworm.wormpos[$_c].x
+		if ( $_c == doLevel::userworm.headindex )
+			printf "  <- headindex\n"
+		else
+			printf "\n"
+		end
+		set $_c++
+	end
+end
+
+#################################################################
+# SOME HOOKS
+#################################################################
+
+# hook-stop
+# Dump the worm each time execution stops
+define hook-stop
+	worm_dump
+end
+
+#################################################################
+# Commands we like to be executed during load of this file
+#################################################################
+
+break main
+break readUserInput
+set listsize 10
+# Remove next line if used with a debugger without TUI-mode, e.g on Mac or MinGW
+#winheight src 12
+
