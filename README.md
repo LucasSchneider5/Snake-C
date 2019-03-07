@@ -2,7 +2,12 @@
 
 **Simple Snake clone, made with C**
 
+*Gameplay*
+
+![Screenshot](Assets/Bilder/ss.PNG?raw=true "Gameplay")
+
 *Level 1*
+
 ![Screenshot](Version 5/bin/ss4.PNG.PNG?raw=true "Level 1")
 
 *Level 2*
