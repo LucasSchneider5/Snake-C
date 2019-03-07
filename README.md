@@ -1,3 +1,3 @@
 # Snake
 
-Simple Snake clone made with C
+Simple Snake clone, made with C
