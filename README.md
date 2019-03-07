@@ -4,7 +4,7 @@
 
 *Gameplay*
 
-![Screenshot](Assets/Bilder/ss.PNG?raw=true "Gameplay")
+![Screenshot](Version 5/bin/ss4.PNG?raw=true "Gameplay")
 
 *Level 1*
 
