@@ -2,23 +2,19 @@
 
 **Simple Snake clone, made with C**
 
-*Gameplay*
-
-![Screenshot](Version 5/bin/ss4.PNG?raw=true "Gameplay")
-
 *Level 1*
 
-![Screenshot](Version 5/bin/ss4.PNG.PNG?raw=true "Level 1")
+![Screenshot](ss1.PNG?raw=true "Level 1")
 
 *Level 2*
 
-![Screenshot](Version 5/bin/ss2.PNG?raw=true "Level 2")
+![Screenshot](ss2.PNG?raw=true "Level 2")
 
 *Level 3*
 
-![Screenshot](Version 5/bin/ss3.PNG?raw=true "Level 3")
+![Screenshot](ss3.PNG?raw=true "Level 3")
 
 *Level 4*
 
-![Screenshot](Version 5/bin/ss4.PNG?raw=true "Level 4")
+![Screenshot](ss4.PNG?raw=true "Level 4")
 
