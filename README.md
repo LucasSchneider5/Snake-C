@@ -3,7 +3,7 @@
 **Simple Snake clone, made with C**
 
 **How to: (Unix)**
-* Download repository:```https://github.com/Tailor1337/Snake-C.git```
+* Download repository:```git clone https://github.com/Tailor1337/Snake-C.git```
 * Choose the version you want to play (recommended: Version 10): ```cd Snake-c/Version 10```
 * Compile with: ```make```
 * Start the game: ```./bin/worm```
