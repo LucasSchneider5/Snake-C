@@ -2,6 +2,12 @@
 
 **Simple Snake clone, made with C**
 
+**How to: (Unix)**
+1. Download repository:``
+2. Choose the version you want to play (recommended: Version 10): `cd Snake-c/Version 10`
+3. Compile with: ``
+4. Start the game: ``
+
 *Level 1*
 
 ![Screenshot](ss1.PNG?raw=true "Level 1")
